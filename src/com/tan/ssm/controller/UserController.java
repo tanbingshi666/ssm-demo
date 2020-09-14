@@ -17,7 +17,8 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@RequestMapping(value = "login")
+	// http://localhost:8080/ssm-demo/login.do?userName=tan&userEmail=123456789
+	@RequestMapping(value = "login.do")
 	@ResponseBody
 	public User login(@RequestParam("userName") String userName,
 			@RequestParam("userEmail") String userEmail) {
@@ -25,6 +26,23 @@ public class UserController {
 		User user = userService.login(userName, userEmail);
 		System.out.println(user);
 		return user;
+	}
+
+	@RequestMapping("contact-post.do")
+	public String contactPost(String userName, String userEmail,
+			String userPhone, String userMsg) {
+
+		User user = new User();
+		user.setUserName(userName);
+		user.setUserEmail(userEmail);
+		user.setUserPhone(userPhone);
+		user.setUserMsg(userMsg);
+
+		userService.register(user);
+		
+
+		return null;
+
 	}
 
 }

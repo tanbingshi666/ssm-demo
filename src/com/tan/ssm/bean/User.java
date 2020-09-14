@@ -6,11 +6,20 @@ package com.tan.ssm.bean;
  *
  */
 public class User {
-
+	
+	private int userId;
 	private String userName;
 	private String userEmail;
 	private String userPhone;
 	private String userMsg;
+	
+	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public String getUserName() {
 		return userName;
 	}

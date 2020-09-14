@@ -9,4 +9,6 @@ public interface UserMapper {
 	User login(@Param("userName") String userName,
 			@Param("userEmail") String userEmail);
 
+	void register(User user);
+
 }

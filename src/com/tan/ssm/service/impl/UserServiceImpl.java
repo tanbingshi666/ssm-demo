@@ -9,13 +9,18 @@ import com.tan.ssm.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
-	
+
 	@Autowired
 	UserMapper userMapper;
 
-	public User login(String userName,String userEmail) {
+	public User login(String userName, String userEmail) {
 		// TODO Auto-generated method stub
-		return userMapper.login(userName,userEmail);
+		return userMapper.login(userName, userEmail);
+	}
+
+	public void register(User user) {
+		userMapper.register(user);
+
 	}
 
 }
