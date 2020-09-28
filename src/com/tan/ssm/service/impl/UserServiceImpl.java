@@ -13,9 +13,9 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserMapper userMapper;
 
-	public User login(String userName, String userEmail) {
+	public User login(String userName, String passwd) {
 		// TODO Auto-generated method stub
-		return userMapper.login(userName, userEmail);
+		return userMapper.login(userName, passwd);
 	}
 
 	public void register(User user) {

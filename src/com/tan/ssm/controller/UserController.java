@@ -41,7 +41,7 @@ public class UserController {
 		userService.register(user);
 		
 
-		return null;
+		return "forward:index.jsp";
 
 	}
 

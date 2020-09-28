@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
 <title>Home</title>
@@ -31,9 +32,9 @@
 				</div>
 				<div class="account_desc">
 					<ul>
-						<li><a href="contact.html">Register</a></li>
+						<li><a href="register.do">Register</a></li>
 						<li><a href="contact.do">Login</a></li>
-						<li><a href="preview.html">Delivery</a></li>
+						<li><a href="preview.do">Delivery</a></li>
 						<li><a href="#">Checkout</a></li>
 						<li><a href="#">My Account</a></li>
 					</ul>
@@ -144,27 +145,32 @@
 						<h3>New Products</h3>
 					</div>
 				</div>
+				
 				<div class="section group">
+				
+				<c:forEach items="${movies }" var="movie">
 					<div class="grid_1_of_5 images_1_of_5">
 						<a href="preview.html"><img src="images/end-game.jpg" alt="" /></a>
 						<h2>
-							<a href="preview.html">End Game</a>
+							<a href="preview.html">${movie.name } </a>
 						</h2>
 						<div class="price-details">
 							<div class="price-number">
 								<p>
-									<span class="rupees">$620.87</span>
+									<span class="rupees">${movie.director }</span>
 								</p>
 							</div>
 							<div class="add-cart">
 								<h4>
-									<a href="preview.html">Add to Cart</a>
+									<a href="preview.html">播放</a>
 								</h4>
 							</div>
 							<div class="clear"></div>
 						</div>
 					</div>
-					<div class="grid_1_of_5 images_1_of_5">
+				</c:forEach>	
+					
+					<!-- <div class="grid_1_of_5 images_1_of_5">
 						<a href="preview.html"><img src="images/Sorority_Wars.jpg"
 							alt="" /></a>
 						<h2>
@@ -183,9 +189,9 @@
 							</div>
 							<div class="clear"></div>
 						</div>
-
-					</div>
-					<div class="grid_1_of_5 images_1_of_5">
+					</div>-->
+					 
+					<!-- <div class="grid_1_of_5 images_1_of_5">
 						<a href="preview.html"><img
 							src="images/New-Moon-The-Score-cover-twilight.jpg" alt="" /></a>
 						<h2>
@@ -204,9 +210,9 @@
 							</div>
 							<div class="clear"></div>
 						</div>
-
-					</div>
-					<div class="grid_1_of_5 images_1_of_5">
+					</div> -->
+					
+					<!-- <div class="grid_1_of_5 images_1_of_5">
 						<a href="preview.html"><img src="images/avatar_movie.jpg"
 							alt="" /></a>
 						<h2>
@@ -225,8 +231,9 @@
 							</div>
 							<div class="clear"></div>
 						</div>
-					</div>
-					<div class="grid_1_of_5 images_1_of_5">
+					</div> -->
+					
+					<!-- <div class="grid_1_of_5 images_1_of_5">
 						<a href="preview.html"><img src="images/black-swan.jpg" alt="" /></a>
 						<h2>
 							<a href="preview.html">Black Swan</a>
@@ -244,7 +251,8 @@
 							</div>
 							<div class="clear"></div>
 						</div>
-					</div>
+					</div> -->
+					
 				</div>
 				<div class="content_bottom">
 					<div class="heading">

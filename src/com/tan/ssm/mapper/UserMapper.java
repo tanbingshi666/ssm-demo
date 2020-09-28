@@ -7,7 +7,7 @@ import com.tan.ssm.bean.User;
 public interface UserMapper {
 
 	User login(@Param("userName") String userName,
-			@Param("userEmail") String userEmail);
+			@Param("passwd") String passwd);
 
 	void register(User user);
 
